@@ -1,0 +1,110 @@
+html,
+body,
+ul, ol,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+.card-container {
+    width: 320px;
+    text-align: center;
+    background-color: #001F23;
+}
+
+.card-header {
+
+}
+
+.skype-btn {
+    overflow: hidden;
+}
+
+.skype-btn .close-x {
+
+}
+
+.card-body {
+
+}
+
+.spy-text {
+
+}
+
+.card-title {
+
+}
+
+.card-smileys {
+
+}
+
+@keyframes cligner {
+    0% {
+        top: 14px;
+        height: 1px;
+    }
+    100% {
+        top: 10px;
+        height: 6px;
+    }
+    100% {
+        top: 10px;
+        height: 6px;
+    }
+    100% {
+        top: 10px;
+        height: 6px;
+    }
+}
+
+.smiley {
+    display: inline-block;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #f5c906;
+    border: 4px solid #ffffff;
+}
+
+.smiley::before {
+    content: "";
+    border-left: 6px solid #001F23;
+    width: auto;
+    height: 6px;
+    position: absolute;
+    left: 5px;
+    animation: cligner 1s infinite;
+    animation-delay: 3s;
+}
+
+.smiley::after {
+    content: "";
+    border-right: 6px solid #001F23;
+    width: auto;
+    height: 6px;
+    position: absolute;
+    right: 5px;
+}
+.smiley::after,
+.smiley::before {
+    top: 10px;
+    border-radius: 50%;
+}
+
+.mouth {
+    display: inline-block;
+    border-bottom: 4px solid #001F23;
+    width: 10px;
+    position: relative;
+    top: 10px;
+}
+
