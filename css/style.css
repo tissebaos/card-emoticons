@@ -50,11 +50,7 @@ a {
         top: 14px;
         height: 1px;
     }
-    100% {
-        top: 10px;
-        height: 6px;
-    }
-    100% {
+    5% {
         top: 10px;
         height: 6px;
     }
@@ -67,44 +63,147 @@ a {
 .smiley {
     display: inline-block;
     position: relative;
-    width: 32px;
-    height: 32px;
+    width: 38px;
+    height: 38px;
     overflow: hidden;
     border-radius: 50%;
     background-color: #f5c906;
     border: 4px solid #ffffff;
+    cursor: pointer;
 }
 
+.smiley:hover::after,
+.smiley:hover::before {
+    transform: translatex(-2px);
+}
+
+.smiley-1 {
+    background-image: linear-gradient(45deg, #ED2B33, #ED2B33, #fef357bb);
+}
+
+.smiley-2 {
+    background-image: linear-gradient(45deg, #ED2B33, #fef357bb);
+}
+
+.smiley-3 {
+    background-image: linear-gradient(45deg, #ED2B33, #fef357bb, #fef357bb);
+}
+
+.smiley-4 {
+    background-image: linear-gradient(45deg, #ED2B33, #fef357bb, #fef357bb, #fef357bb);
+}
+
+.smiley-5 {
+    background-image: linear-gradient(45deg, #fef357bb, #fef357bb);
+}
+
+.smiley::before {
+    left: 8px;
+}
+
+.smiley::after {
+    right: 4px;
+}
+
+.smiley::after,
 .smiley::before {
     content: "";
     border-left: 6px solid #001F23;
     width: auto;
     height: 6px;
     position: absolute;
-    left: 5px;
-    animation: cligner 1s infinite;
-    animation-delay: 3s;
-}
-
-.smiley::after {
-    content: "";
-    border-right: 6px solid #001F23;
-    width: auto;
-    height: 6px;
-    position: absolute;
-    right: 5px;
-}
-.smiley::after,
-.smiley::before {
     top: 10px;
     border-radius: 50%;
+    animation: cligner 5s infinite;
+    transition: 0.2s ease-in-out;
+}
+
+.smiley-1::after,
+.smiley-1::before {
+    top: 20px !important;
+    animation-delay: 4s;
+}
+
+.smiley-2::after,
+.smiley-2::before{
+    top: 17px !important;
+    animation-delay: 8s;
+}
+
+.smiley-3::after,
+.smiley-3::before {
+    top: 15px !important;
+    animation-delay: 6s;
+}
+
+.smiley-4::after,
+.smiley-4::before {
+    top: 13px !important;
+    animation-delay: 10s;
+}
+
+.smiley-5::after,
+.smiley-5::before {
+    top: 10px !important;
+    animation-delay: 12s;
 }
 
 .mouth {
     display: inline-block;
-    border-bottom: 4px solid #001F23;
     width: 10px;
     position: relative;
-    top: 10px;
+    right: -3px;
+    transition: 0.2s ease-in-out;
 }
+
+.smiley:hover .mouth {
+    transform: translatex(-3px);
+}
+
+
+.smiley-1 .mouth, 
+.smiley-2 .mouth, 
+.smiley-4 .mouth,
+.smiley-5 .mouth {
+    width: 4px;
+    height: 2px;
+    border-left: 3px solid #001F23;
+    border-right: 3px solid #001F23;
+    border-radius: 100% 100% 0 0;
+}
+
+.smiley-1 .mouth, 
+.smiley-2 .mouth {
+    border-top: 3px solid #001F23;
+    border-radius: 100% 100% 0 0;
+}
+
+.smiley-4 .mouth, 
+.smiley-5 .mouth {
+    border-bottom: 3px solid #001F23;
+    border-radius: 0 0 100% 100%;
+}
+
+.smiley-1 .mouth {
+    top: 17px;
+}
+
+.smiley-2 .mouth {
+    top: 14px;
+}
+
+.smiley-3 .mouth {
+    top: 12px;
+    border-bottom: 3px solid #001F23;
+}
+
+.smiley-4 .mouth {
+    top: 11px;
+}
+
+.smiley-5 .mouth {
+    top: 9px;
+    background-color: #001F23;
+}
+
 
